@@ -2,3 +2,5 @@ venv/
 images
 __init__.py
 __pycache__/
+model/
+.vscode/
