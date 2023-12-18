@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import os
 from application import djpeg
 
-ORIGINAL_DIR = 'D:\\data_sets\\oral_photograph\\roboflow\\proyecto_odoto_v1.v6i.coco-segmentation\\train'
-TAMPERED_DIR = 'C:\\Repositories\\iniciacao-cientifica\\cereia\\tampering-detection\\data_sets\\oral_tampering'
+ORIGINAL_DIR = 'D:\\data_sets\\general_image_tampering\\CASIA\\CASIA1\\authentic'
+TAMPERED_DIR = 'D:\\data_sets\\general_image_tampering\\CASIA\\CASIA1\\tampered'
 
 
 def create_jpeg_masks(original_dir: str, tampered_dir: str):
@@ -76,7 +76,7 @@ def evaluate(original_results_dir: str, tampered_results_dir: str) -> dict:
 
 
 if __name__ == '__main__':
-    # create_jpeg_masks(ORIGINAL_DIR, TAMPERED_DIR)
+    create_jpeg_masks(ORIGINAL_DIR, TAMPERED_DIR)
 
     original_results = [file_name for file_name in os.listdir(
         os.path.join(ORIGINAL_DIR, 'results')) if file_name.endswith('_result.jpg')]

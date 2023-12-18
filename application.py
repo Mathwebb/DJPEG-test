@@ -28,7 +28,7 @@ def _extract_patches(Y, patch_size, stride):
 def localizing_double_JPEG(Y, qvectors, stride=32, batch_size=32, net=None, device=None):
     net.eval()
     result = 0
-    PATCH_SIZE = 256
+    PATCH_SIZE = 128
 
     qvectors = torch.from_numpy(qvectors).float()
     qvectors = qvectors.to(device)
